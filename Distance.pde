@@ -1,3 +1,11 @@
+float distance(float x, float y, float z) {
+  return p_distance(x, y, z, 2);
+}
+
+float distance(PVector vec) {
+  return p_distance(vec, 2);
+}
+
 // A L-inf distance
 float max_distance(float x, float y, float z) {
   return Math.max(Math.max(Math.abs(x), Math.abs(y)), Math.abs(z));
@@ -25,13 +33,15 @@ float p_distance(PVector vec, int p) {
 }
 
 
-float distance(float x, float y, float z) {
+// Manhattan distance
+// (No need to call Math.pow for a power of 1)
+float manhattan_distance(float x, float y, float z) {
   // This is a Manhattan distance
   float dist = x + y + z;
   return dist;
 }
 
-float distance(PVector vec) {
+float manhattan_distance(PVector vec) {
   // This is a Manhattan distance
   float dist = vec.x + vec.y + vec.z;
   return dist;
