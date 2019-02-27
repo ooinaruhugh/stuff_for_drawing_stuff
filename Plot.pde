@@ -1,8 +1,10 @@
 void dot_plot() {
   x = x_value(t);
   y = y_value(t);
-  point(x, y);
+  strokeWeight(1);
 
+  point(x, y);
+  
   t += 0.01;
 }
 
